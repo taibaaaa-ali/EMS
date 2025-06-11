@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,4 +14,5 @@ protected:
 public:
     Package(string n = "", int packageId = 0, string sz = "", float p = 0);
     void get_package_details();
+    float getPrice() const;
 };

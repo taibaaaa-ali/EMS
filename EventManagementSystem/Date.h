@@ -8,8 +8,10 @@ struct Date
     int month;
     int year;
 
-    void display()
+    friend ostream& operator<<(ostream& os, const Date& d)
     {
-        cout << day << "/" << month << "/" << year << endl;
+        os << d.day << "/" << d.month << "/" << d.year;
+        return os;
     }
+    
 };

@@ -1,39 +1,27 @@
 #include "Event.h"
 
-Event::Event(string n, int eventId, string v, Date d, string category, int stallCount)
-    : name(n), id(eventId), venue(v), date(d), productCategory(category), noOfStalls(stallCount)
+Event::Event(string n, int eventId, string v, Date d, string category, int stallCount): name(n), id(eventId), venue(v), date(d), productCategory(category), noOfStalls(stallCount), noOfVendors(0)
 {
     stalls = new Stall[noOfStalls];
+    vendors = new Vendor * [noOfStalls];
 }
 
-void Event::add_stall(Stall stall, int index)
+Event::~Event()
 {
-    if (index >= 0 && index < noOfStalls)
-    {
-        stalls[index] = stall;
-    }
+    delete[] stalls;
+    delete[] vendors;
 }
 
-Stall* Event::get_stall(int index)
-{
-    if (index >= 0 && index < noOfStalls)
-    {
-        return &stalls[index];
-    }
-    return nullptr;
-}
-
-void Event::show_event_details()
+void Event::show_event_details() const
 {
     cout << "Event: " << name << endl;
-    cout << "Event ID: " << id << endl;
+    cout << "ID: " << id << endl;
     cout << "Venue: " << venue << endl;
-    cout << "Date: ";
-    date.display();
+    cout << "Date: " << date << endl;
     cout << "Category: " << productCategory << endl;
 }
 
-void Event::show_all_stalls()
+void Event::show_all_stalls() const
 {
     for (int i = 0; i < noOfStalls; i++)
     {
@@ -41,7 +29,48 @@ void Event::show_all_stalls()
     }
 }
 
-Event::~Event()
+string Event::getProductCategory() const
+{ 
+    return productCategory;
+}
+
+Date Event::getDate() const 
 {
-    delete[] stalls;
+    return date;
+}
+
+void Event::add_stall(const Stall& stall, int index)
+{
+    if (index >= 0 && index < noOfStalls)
+    {
+         stalls[index] = stall;
+    }
+}
+
+Stall* Event::get_stall(int index) const
+{
+    if (index >= 0 && index < noOfStalls)
+        return &stalls[index];
+    return nullptr;
+}
+
+bool Event::hasAvailability() const
+{ 
+    return noOfVendors < noOfStalls;
+}
+
+void Event::addVendor(Vendor* v)
+{
+    if (noOfVendors < noOfStalls)
+        vendors[noOfVendors++] = v;
+}
+
+void Event::listVendors() const
+{
+    cout << "-- Registered Vendors --" << endl;
+    for (int i = 0; i < noOfVendors; i++)
+    {
+        vendors[i]->get_details();
+    }
+
 }

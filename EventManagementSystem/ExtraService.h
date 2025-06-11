@@ -14,5 +14,5 @@ protected:
 public:
     ExtraService(int id = 0, string n = "", string desc = "", float price = 0);
     void get_service_info();
-    float get_price();
+    float get_price() const;
 };

@@ -1,28 +1,27 @@
 #include "Booking.h"
 
-Booking::Booking(int id, Vendor* v, Stall* s, string st)
-    : bookingID(id), vendor(v), stall(s), status(st) {
-}
+Booking::Booking(int id, Vendor* v, Stall* s, string st): bookingID(id), vendor(v), stall(s), status(st) {}
 
 void Booking::confirm()
 {
-    if (stall != nullptr)
+    if (stall)
     {
         stall->book();
+        status = "Confirmed";
     }
-    status = "Confirmed";
+       
 }
 
 void Booking::cancel()
 {
-    if (stall != nullptr)
+    if (stall)
     {
-        stall->release();
+        status = "Cancelled";
     }
-    status = "Cancelled";
+        stall->release();
 }
 
-void Booking::get_booking_details()
+void Booking::get_booking_details() const
 {
     cout << "Booking ID: " << bookingID << endl;
     cout << "Status: " << status << endl;

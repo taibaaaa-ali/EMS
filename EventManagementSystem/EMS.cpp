@@ -1,52 +1,181 @@
 #include "EMS.h"
+#include <iostream>
 using namespace std;
+
+EMS::EMS()
+{
+    eventCount = 2;
+    events = new Event * [eventCount];
+
+    events[0] = new Event("Comic Expo", 301, "Hall A", Date{ 11, 6, 2025 }, "Anime", 2);
+
+    events[1] = new Event("Gadget Fair", 302, "Hall B", Date{ 20, 7, 2025 }, "Electronics", 3);
+
+    for (int i = 0; i < eventCount; ++i)
+    {
+        int stallsToAdd = events[i]->getNoOfStalls();
+        for (int j = 0; j < stallsToAdd; j++)
+        {
+            Stall s(j + 1,"10x10", j, j,events[i]->getProductCategory(), 500 + 200 * j);
+            events[i]->add_stall(s, j);
+        }
+    }
+}
+
+EMS::~EMS()
+{
+    for (int i = 0; i < eventCount; i++)
+    {
+        delete events[i];
+    }
+    delete[] events;
+}
 
 void EMS::run()
 {
-    Vendor v("Taiba", 101, "Anime", "taibaxali@gmail.com");
+    cout << "Enter vendor name: ";
+    string vName;
+    getline(cin, vName);
 
-    Date eventDate = { 11, 6, 2025 };
-    Event e("Comic Expo", 301, "Expo Center", eventDate, "Pop Culture", 1);
-    Stall s1(1, "10x10", 0, 0, "Premium", 1000);
-    e.add_stall(s1, 0);
+    cout << "Enter vendor ID: ";
+    int vId;
+    cin >> vId;
+    cin.ignore();
 
-    Package p("Starter", 201, "10x10", 1200);
-    ExtraService wifi(301, "WiFi", "High speed 4G Internet", 100);
-    ReservationExtraService res1(401, &wifi, 2);
-    Booking b1(501, &v, e.get_stall(0));
+    cout << "Enter product category: ";
+    string vCat;
+    getline(cin, vCat);
 
-    Date invoiceDate = { 11, 6, 2025 };
-    Invoice inv(601, &b1, invoiceDate, 1300);
-    Date paymentDate = { 11, 6, 2025 };
-    Payment pay1(701, &inv, paymentDate, 1300, "Credit Card");
+    cout << "Enter contact info: ";
+    string vContact;
+    getline(cin, vContact);
 
-    b1.confirm();
-    pay1.apply();
+    Vendor vendor(vName, vId, vCat, vContact);
 
-    cout << "VENDOR DETAILS: " << endl;
-    v.get_details();
+    cout << "\nAvailable Events:\n";
+    for (int i = 0; i < eventCount; i++)
+    {
+        cout << (i + 1) << ". ";
+        events[i]->show_event_details();
+        cout << endl;
+    }
 
-    cout << "\nEVENT DETAILS: " << endl;
-    e.show_event_details();
+    cout << "Select event number: ";
+    int choice;
+    cin >> choice;
+    cin.ignore();
 
-    cout << "\nSTALLS IN EVENT: " << endl;
-    e.show_all_stalls();
+    if (choice < 1 || choice > eventCount)
+    {
+        cout << "Invalid event selection.\n";
+        return;
+    }
 
-    cout << "\nPACKAGE DETAILS: " << endl;
-    p.get_package_details();
+    Event* evt = events[choice - 1];
 
-    cout << "\nEXTRA SERVICE DETAILS: " << endl;
-    wifi.get_service_info();
+    if (vendor.getProductCategory() != evt->getProductCategory())
+    {
+        cout << "Sorry we can’t book you for this event as your product category does't match theme of our event :( \n";
+        return;
+    }
 
-    cout << "\nRESERVED SERVICE DETAILS: " << endl;
-    res1.get_reservation_info();
+    Package packages[2] = 
+    {
+        Package("Standard", 101, "10x10",  800),
+        Package("Premium",  102, "15x15", 1200)
+    };
 
-    cout << "\nBOOKING DETAILS: " << endl;
-    b1.get_booking_details();
+    cout << "\nAvailable Packages:\n";
+    for (int i = 0; i < 2; i++)
+    {
+        cout << (i + 1) << ". ";
+        packages[i].get_package_details();
+        cout << endl;
+    }
 
-    cout << "\nINVOICE DETAILS: " << endl;
-    inv.get_invoice_details();
+    cout << "Select package number: ";
+    cin >> choice;
+    cin.ignore();
 
-    cout << "\nPAYMENT DETAILS: " << endl;
-    pay1.get_payment_info();
+    if (choice < 1 || choice > 2)
+    {
+        cout << "Invalid package selection.\n";
+        return;
+    }
+
+    Package& pkg = packages[choice - 1];
+
+    cout << "\nStalls for this event:\n";
+    evt->show_all_stalls();
+
+    cout << "Select stall index (1-" << evt->getNoOfStalls() << "): ";
+    int stallIdx;
+    cin >> stallIdx;
+    cin.ignore();
+
+    if (stallIdx < 1 || stallIdx > evt->getNoOfStalls())
+    {
+        cout << "Invalid stall selection.\n";
+        return;
+    }
+
+    Stall* stall = evt->get_stall(stallIdx - 1);
+
+    Booking booking(501, &vendor, stall);
+    Date evtDate = evt->getDate();
+    Date dueDate = { evtDate.day - 7, evtDate.month, evtDate.year };
+
+    Invoice invoice(601, &booking, dueDate, pkg.getPrice());
+
+    cout << "\nInvoice Due Date: ";
+    dueDate;
+
+    cout << "\nPay in full or installments? (1=Full, 2=Installments): ";
+    int payOpt;
+    cin >> payOpt;
+    cin.ignore();
+
+    if (payOpt == 2)
+    {
+        cout << "Number of installments: ";
+        int n;
+        cin >> n;
+        cin.ignore();
+
+        if (n < 1) n = 1;
+        float perInstallment = invoice.getAmountDue() / n;
+
+        for (int i = 1; i <= n; i++)
+        {
+            cout << "Pay installment " << i << " (" << perInstallment << "): ";
+            float amt;
+            cin >> amt;
+            cin.ignore();
+            invoice.pay(amt);
+        }
+    }
+    else
+    {
+        invoice.pay(invoice.getAmountDue());
+    }
+
+    booking.confirm();
+    evt->addVendor(&vendor);
+
+    cout << "\nBOOKING CONFIRMED\n";
+
+    cout << "\nVENDOR DETAILS\n";
+    vendor.get_details();
+
+    cout << "\nEVENT DETAILS\n";
+    evt->show_event_details();
+
+    cout << "\nSTALL ASSIGNED\n";
+    stall->stall_details();
+
+    cout << "\nINVOICE DETAILS\n";
+    invoice.get_invoice_details();
+
+    cout << "\nREGISTERED VENDORS IN EVENT\n";
+    evt->listVendors();
 }

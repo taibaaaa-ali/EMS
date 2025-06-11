@@ -1,8 +1,6 @@
 #include "ExtraService.h"
 
-ExtraService::ExtraService(int id, string n, string desc, float price)
-    : serviceID(id), name(n), description(desc), unitPrice(price) {
-}
+ExtraService::ExtraService(int id, string n, string desc, float price) : serviceID(id), name(n), description(desc), unitPrice(price) {}
 
 void ExtraService::get_service_info()
 {
@@ -12,7 +10,7 @@ void ExtraService::get_service_info()
     cout << "Unit Price: $" << unitPrice << endl;
 }
 
-float ExtraService::get_price()
+float ExtraService::get_price() const
 {
     return unitPrice;
 }

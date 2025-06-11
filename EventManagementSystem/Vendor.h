@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <string>
 using namespace std;
@@ -14,4 +14,5 @@ protected:
 public:
     Vendor(string n = "", int vendorId = 0, string category = "", string contact = "");
     void get_details();
+    string getProductCategory() const;
 };

@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include "Date.h"
 #include "Booking.h"
 
@@ -12,7 +12,8 @@ protected:
     float amountPaid;
 
 public:
-    Invoice(int id = 0, Booking* b = nullptr, Date date = { 0, 0, 0 }, float due = 0.0f, float paid = 0.0f);
+    Invoice(int id = 0, Booking* b = nullptr, Date date = { 0,0,0 }, float due = 0.0, float paid = 0.0);
     void pay(float amt);
-    void get_invoice_details();
+    void get_invoice_details() const;
+    float getAmountDue() const;
 };

@@ -2,7 +2,7 @@
 
 int main()
 {
-    EMS ems;
-    ems.run();
+    EMS system;
+    system.run();
     return 0;
 }

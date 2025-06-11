@@ -17,5 +17,5 @@ public:
     Booking(int id = 0, Vendor* v = nullptr, Stall* s = nullptr, string st = "Pending");
     void confirm();
     void cancel();
-    void get_booking_details();
+    void get_booking_details() const;
 };
