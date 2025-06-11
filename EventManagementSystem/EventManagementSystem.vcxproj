@@ -24,6 +24,7 @@
     <ProjectGuid>{772940fe-e87e-4027-8f1d-bdc01c4c9ccc}</ProjectGuid>
     <RootNamespace>EventManagementSystem</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>EMS</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -123,7 +124,30 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="EventManagementSystem.cpp" />
+    <ClCompile Include="Booking.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EMS.cpp" />
+    <ClCompile Include="ExtraService.cpp" />
+    <ClCompile Include="Invoice.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="Package.cpp" />
+    <ClCompile Include="Payment.cpp" />
+    <ClCompile Include="ReservationExtraService.cpp" />
+    <ClCompile Include="Stall.cpp" />
+    <ClCompile Include="Vendor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Booking.h" />
+    <ClInclude Include="Date.h" />
+    <ClInclude Include="EMS.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="ExtraService.h" />
+    <ClInclude Include="Invoice.h" />
+    <ClInclude Include="Package.h" />
+    <ClInclude Include="Payment.h" />
+    <ClInclude Include="ReservationExtraService.h" />
+    <ClInclude Include="Stall.h" />
+    <ClInclude Include="Vendor.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
