@@ -1,0 +1,4 @@
+102,Taiba,023663892,Anime,taiba
+116,Pippo,Anime,0309872772,meow
+67,test,Anime,12345678,issa
+104,Taiba,Anime,94884774,12345678
