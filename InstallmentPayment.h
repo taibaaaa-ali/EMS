@@ -1,4 +1,3 @@
-// InstallmentPayment.h
 #ifndef INSTALLMENTPAYMENT_H
 #define INSTALLMENTPAYMENT_H
 

@@ -1,4 +1,3 @@
-// FullPayment.h
 #ifndef FULLPAYMENT_H
 #define FULLPAYMENT_H
 

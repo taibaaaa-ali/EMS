@@ -7,7 +7,7 @@ struct PendingStallSelection
 {
     int vendorID;
     int eventID;
-    int stallID; // 1-6
+    int stallID; 
 
     PendingStallSelection() : vendorID(0), eventID(0), stallID(0) {}
     PendingStallSelection(int v, int e, int s) : vendorID(v), eventID(e), stallID(s) {}

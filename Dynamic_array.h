@@ -28,8 +28,6 @@ public:
     Dynamic_array()
         : arr(nullptr), len(0), cap(0)
     {
-        // start with capacity 4
-        cap = 4;
         arr = new T[cap];
     }
 
@@ -70,11 +68,9 @@ public:
         delete[] arr;
     }
 
-    // Indexing
     T& operator[](int index) { return arr[index]; }
     const T& operator[](int index) const { return arr[index]; }
 
-    // Add element
     void push(const T& item)
     {
         if (len >= cap)
@@ -82,14 +78,12 @@ public:
         arr[len++] = item;
     }
 
-    // Remove last
     void pop()
     {
         if (len > 0)
             len--;
     }
 
-    // Remove at index
     void delete_at(int index)
     {
         if (index < 0 || index >= len)
@@ -99,18 +93,15 @@ public:
         len--;
     }
 
-    // Query size
     int size() const { return len; }
 
     bool empty() const { return len == 0; }
 
     void clear() { len = 0; }
 
-    // Access last element
     T& back() { return arr[len - 1]; }
     const T& back() const { return arr[len - 1]; }
 
-    // Find element
     int find(const T& value) const
     {
         for (int i = 0; i < len; i++)

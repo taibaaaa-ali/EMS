@@ -17,7 +17,6 @@ public:
     Payment(int id, float amt, myString m);
     virtual ~Payment() {}
 
-    // leave this untouched
     virtual void process_payment() const = 0;
 
     float getAmount() const { return amount; }

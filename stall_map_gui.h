@@ -17,14 +17,14 @@ int showStallMapGUI(const bool* bookedStalls)
     {
         sf::RenderWindow window(sf::VideoMode(600, 400), "Select Your Stall");
         sf::Font font;
-        if (!font.loadFromFile("arial.ttf")) // Place arial.ttf in your executable folder!
+        if (!font.loadFromFile("arial.ttf")) 
             throw std::runtime_error("Font not found");
 
         sf::RectangleShape stalls[6];
         sf::Text labels[6];
         int positions[6][2] = { {100,60}, {400,60}, {100,180}, {400,180}, {200,320}, {300,320} };
-        sf::Color available(150, 200, 255); // Blue
-        sf::Color taken(160, 160, 160);     // Gray
+        sf::Color available(150, 200, 255); 
+        sf::Color taken(160, 160, 160);     
 
         for (int i = 0; i < 6; ++i)
         {
@@ -85,15 +85,13 @@ int showStallMapGUI(const bool* bookedStalls)
             }
             window.display();
         }
-        return 0; // Closed window, no selection
+        return 0;
     }
     catch (...)
     {
-        // Fallback to ASCII if any error
     }
 #endif
 
-    // Fallback: ASCII
     std::cout << "\n[Simplified] SFML not available, using ASCII fallback.\n";
     std::cout << "+-----------+\n";
     std::cout << "| ";

@@ -16,6 +16,7 @@
 #include "InstallmentPayment.h"
 #include "PendingStallSelection.h"
 #include "stall_map_gui.h"
+#include "Logging.h"
 
 using namespace std;
 
@@ -77,7 +78,6 @@ private:
 
     bool vendorHasBookingOrPendingForEvent(Vendor* v, int eventID)
     {
-        // Pending stall selection for this event
         for (int i = 0; i < pendingStallSelections.size(); i++)
         {
             if (pendingStallSelections[i].vendorID == v->getID() &&
@@ -86,7 +86,6 @@ private:
                 return true;
             }
         }
-        // Bookings for this event
         for (int i = 0; i < allBookings.size(); i++)
         {
             if (allBookings[i]->getVendor()->getID() == v->getID())
@@ -94,7 +93,6 @@ private:
                 Stall* s = allBookings[i]->getStall();
                 if (s != nullptr)
                 {
-                    // Does this stall belong to this event?
                     for (int j = 0; j < events.size(); j++)
                     {
                         if (events[j].getID() == eventID)
@@ -117,13 +115,11 @@ private:
 
     bool isStallBookedForEvent(int eventID, int stallID)
     {
-        // Check bookings for THIS EVENT AND STALL
         for (int i = 0; i < allBookings.size(); i++)
         {
             Stall* s = allBookings[i]->getStall();
             if (s != nullptr && s->getID() == stallID)
             {
-                // Only for the same event
                 for (int j = 0; j < events.size(); j++)
                 {
                     if (events[j].getID() == eventID)
@@ -138,7 +134,6 @@ private:
                 }
             }
         }
-        // Check pending stall selection for this event/stall
         for (int i = 0; i < pendingStallSelections.size(); i++)
         {
             if (pendingStallSelections[i].eventID == eventID &&
@@ -205,6 +200,7 @@ void EMS::run()
             saveBookingsToFile();
             saveInvoicesToFile();
             savePendingStallSelectionsToFile();
+            log_message(myString("INFO"), myString("System shutdown. Goodbye! :)"));
             break;
         }
         else
@@ -213,6 +209,7 @@ void EMS::run()
         }
     }
 }
+
 
 void EMS::vendorRegister()
 {
@@ -229,7 +226,8 @@ void EMS::vendorRegister()
     {
         if (registeredVendors[i]->getID() == id)
         {
-            cout << "Vendor ID already exists.\n";
+            log_message(myString("ERROR"), myString("Vendor ID already exists during registration. :("));
+            cout << "Vendor ID already exists. :(" << endl;
             return;
         }
     }
@@ -238,7 +236,8 @@ void EMS::vendorRegister()
     {
         if (pendingRequests[i].getID() == id)
         {
-            cout << "Vendor ID already in pending list.\n";
+            log_message(myString("ERROR"), myString("Vendor ID already in pending list during registration. :("));
+            cout << "Vendor ID already in pending list. :(" << endl;
             return;
         }
     }
@@ -250,7 +249,8 @@ void EMS::vendorRegister()
     Vendor v(myString(name_c), id, myString(cat_c), myString(contact_c), myString(pass_c));
     pendingRequests.push(v);
 
-    cout << "Registration submitted. Awaiting manager approval.\n";
+    log_message(myString("INFO"), myString("Vendor registration submitted, awaiting manager approval. :)"));
+    cout << "Registration submitted. Awaiting manager approval. :)" << endl;
     savePendingVendorsToFile();
 }
 
@@ -265,11 +265,13 @@ void EMS::vendorLogin()
     Vendor* v = findVendorByID(id);
     if (v == nullptr || !v->login(id, myString(pass_c)))
     {
-        cout << "Invalid login or not approved yet.\n";
+        log_message(myString("ERROR"), myString("Vendor login failed. :("));
+        cout << "Invalid login or not approved yet. :(" << endl;
         return;
     }
 
-    cout << "\nLogin successful.\n";
+    log_message(myString("INFO"), myString("Vendor logged in successfully. :)"));
+    cout << "\nLogin successful. :)" << endl;
     v->print_details();
 
     vendorDashboard(v);
@@ -306,6 +308,7 @@ void EMS::vendorDashboard(Vendor* v)
         }
         else if (opt == 0)
         {
+            log_message(myString("INFO"), myString("Vendor logged out. :)"));
             return;
         }
         else
@@ -329,7 +332,8 @@ void EMS::vendorRegisterEventStall(Vendor* v)
     }
     if (availableCount == 0)
     {
-        cout << "No events available to register for.\n";
+        log_message(myString("ERROR"), myString("No events available to register for vendor. :("));
+        cout << "No events available to register for. :(" << endl;
         return;
     }
     cout << "Select Event Number to Register: ";
@@ -350,7 +354,8 @@ void EMS::vendorRegisterEventStall(Vendor* v)
     }
     if (idx == -1)
     {
-        cout << "Invalid selection.\n";
+        log_message(myString("ERROR"), myString("Invalid event selection by vendor. :("));
+        cout << "Invalid selection. :(" << endl;
         return;
     }
     vendorSelectStall(v, &events[idx]);
@@ -392,6 +397,7 @@ void EMS::vendorPayInvoices(Vendor* v)
                             {
                                 inv->pay(amt);
                                 paid = inv->getAmountPaid();
+                                log_message(myString("INFO"), myString("Full payment received from vendor. :)"));
                                 cout << "Total Paid: " << paid << "\n";
                             }
                             else break;
@@ -414,6 +420,7 @@ void EMS::vendorPayInvoices(Vendor* v)
                             {
                                 inv->pay(per);
                                 paid = inv->getAmountPaid();
+                                log_message(myString("INFO"), myString("Installment payment received from vendor. :)"));
                                 cout << "Paid: " << paid << " / " << due << "\n";
                                 part++;
                             }
@@ -422,23 +429,27 @@ void EMS::vendorPayInvoices(Vendor* v)
                     }
                     else
                     {
-                        cout << "Invalid choice.\n";
+                        log_message(myString("ERROR"), myString("Invalid payment choice by vendor. :("));
+                        cout << "Invalid choice. :(" << endl;
                         return;
                     }
 
                     if (inv->getAmountPaid() >= inv->getAmountDue())
                     {
                         booking->setStatus(myString("Paid"));
-                        cout << "\nPayment complete. Booking marked as Paid!\n";
+                        log_message(myString("INFO"), myString("Payment complete. Booking marked as Paid! :)"));
+                        cout << "\nPayment complete. Booking marked as Paid! :)" << endl;
                     }
                 }
             }
         }
     }
     if (!found)
-        cout << "No unpaid invoices found.\n";
+    {
+        log_message(myString("ERROR"), myString("No unpaid invoices found for vendor. :("));
+        cout << "No unpaid invoices found. :(" << endl;
+    }
 }
-
 
 void EMS::vendorViewBookings(Vendor* v)
 {
@@ -451,6 +462,7 @@ void EMS::vendorViewBookings(Vendor* v)
             cout << endl;
         }
     }
+    log_message(myString("INFO"), myString("Vendor viewed bookings. :)"));
 }
 
 void EMS::vendorRemoveBooking(Vendor* v)
@@ -469,7 +481,8 @@ void EMS::vendorRemoveBooking(Vendor* v)
     }
     if (count == 0)
     {
-        cout << "No pending (unconfirmed) bookings to remove.\n";
+        log_message(myString("ERROR"), myString("No pending bookings to remove for vendor. :("));
+        cout << "No pending (unconfirmed) bookings to remove. :(" << endl;
         return;
     }
     cout << "Select Booking Number to Remove: ";
@@ -490,11 +503,11 @@ void EMS::vendorRemoveBooking(Vendor* v)
     }
     if (idx == -1)
     {
-        cout << "Invalid selection.\n";
+        log_message(myString("ERROR"), myString("Invalid booking selection to remove by vendor. :("));
+        cout << "Invalid selection. :(" << endl;
         return;
     }
     int bookingID = allBookings[idx]->getID();
-    // Remove related invoice
     for (int j = 0; j < allInvoices.size(); j++)
     {
         if (allInvoices[j]->getBooking()->getID() == bookingID)
@@ -504,18 +517,16 @@ void EMS::vendorRemoveBooking(Vendor* v)
         }
     }
     allBookings.delete_at(idx);
-    cout << "Booking removed.\n";
+    log_message(myString("INFO"), myString("Vendor removed pending booking. :)"));
+    cout << "Booking removed. :)" << endl;
 }
 
 void EMS::vendorSelectStall(Vendor* v, Event* e)
 {
     clearConsole();
 
-    bool booked[7] = {}; // stalls 1-6
+    bool booked[7] = {};
 
-    // For this event, mark stalls as booked if:
-    // 1. They are assigned to any booking (paid/confirmed)
-    // 2. They are in any pending stall selection for this event
     for (int sid = 1; sid <= 6; sid++)
     {
         if (isStallBookedForEvent(e->getID(), sid))
@@ -528,20 +539,21 @@ void EMS::vendorSelectStall(Vendor* v, Event* e)
 
     if (stallID < 1 || stallID > 6 || booked[stallID])
     {
-        cout << "Invalid or already selected stall. Try again next login.\n";
+        log_message(myString("ERROR"), myString("Invalid or already selected stall during selection. :("));
+        cout << "Invalid or already selected stall. Try again next login. :(" << endl;
         return;
     }
-    // Before adding, you could (optionally) double-check again:
     if (isStallBookedForEvent(e->getID(), stallID))
     {
-        cout << "Stall just got booked by someone else. Try again.\n";
+        log_message(myString("ERROR"), myString("Stall just got booked by someone else during selection. :("));
+        cout << "Stall just got booked by someone else. Try again. :(" << endl;
         return;
     }
     pendingStallSelections.push(PendingStallSelection(v->getID(), e->getID(), stallID));
     savePendingStallSelectionsToFile();
-    cout << "Stall selection submitted. Await manager approval.\n";
+    log_message(myString("INFO"), myString("Stall selection submitted, pending manager approval. :)"));
+    cout << "Stall selection submitted. Await manager approval. :)" << endl;
 }
-
 
 void EMS::managerLogin()
 {
@@ -552,12 +564,14 @@ void EMS::managerLogin()
 
     if (admin.login(id, myString(pass_c)))
     {
-        cout << "Login successful.\n";
+        log_message(myString("INFO"), myString("Manager logged in. :)"));
+        cout << "Login successful. :)" << endl;
         managerSession();
     }
     else
     {
-        cout << "Access denied.\n";
+        log_message(myString("ERROR"), myString("Manager access denied. :("));
+        cout << "Access denied. :(" << endl;
     }
 }
 
@@ -604,6 +618,7 @@ void EMS::managerSession()
         }
         else if (opt == 0)
         {
+            log_message(myString("INFO"), myString("Manager logged out. :)"));
             break;
         }
         else
@@ -644,7 +659,8 @@ void EMS::approveVendor()
     registeredVendors.push(vendor);
     pendingRequests.delete_at(vIdx - 1);
 
-    cout << "Vendor approved. Vendor can now login and register to an event.\n";
+    log_message(myString("INFO"), myString("Vendor approved by manager. :)"));
+    cout << "Vendor approved. Vendor can now login and register to an event. :)" << endl;
 }
 
 void EMS::approveEventStallSelections()
@@ -652,7 +668,8 @@ void EMS::approveEventStallSelections()
     cout << "\n--- Pending Event+Stall Selections ---\n";
     if (pendingStallSelections.size() == 0)
     {
-        cout << "No pending event+stall requests.\n";
+        log_message(myString("ERROR"), myString("No pending event+stall requests for manager. :("));
+        cout << "No pending event+stall requests. :(" << endl;
         return;
     }
     for (int i = 0; i < pendingStallSelections.size(); i++)
@@ -689,7 +706,8 @@ void EMS::approveEventStallSelections()
     {
         pendingStallSelections.delete_at(idx - 1);
         savePendingStallSelectionsToFile();
-        cout << "Request rejected. Vendor may try again.\n";
+        log_message(myString("INFO"), myString("Stall selection request rejected by manager. :("));
+        cout << "Request rejected. Vendor may try again. :(" << endl;
         return;
     }
 
@@ -705,7 +723,8 @@ void EMS::approveEventStallSelections()
     }
     if (!v || !e)
     {
-        cout << "Vendor or event not found.\n";
+        log_message(myString("ERROR"), myString("Vendor or event not found during stall approval. :("));
+        cout << "Vendor or event not found. :(" << endl;
         return;
     }
     int bookingID = 500 + allBookings.size();
@@ -726,7 +745,8 @@ void EMS::approveEventStallSelections()
     pendingStallSelections.delete_at(idx - 1);
     savePendingStallSelectionsToFile();
 
-    cout << "Event+Stall approved, booking and invoice created. Vendor may now pay.\n";
+    log_message(myString("INFO"), myString("Event+Stall approved, booking and invoice created. Vendor may now pay. :)"));
+    cout << "Event+Stall approved, booking and invoice created. Vendor may now pay. :)" << endl;
 }
 
 void EMS::managerRemoveEvent()
@@ -742,7 +762,6 @@ void EMS::managerRemoveEvent()
     if (eIdx < 1 || eIdx > events.size()) return;
     int eventID = events[eIdx - 1].getID();
 
-    // Remove related bookings/invoices
     for (int i = allBookings.size() - 1; i >= 0; i--)
     {
         if (allBookings[i]->getStall() && allBookings[i]->getStall()->getID() == eventID)
@@ -756,7 +775,6 @@ void EMS::managerRemoveEvent()
             allBookings.delete_at(i);
         }
     }
-    // Remove related pending stall selections
     for (int i = pendingStallSelections.size() - 1; i >= 0; i--)
     {
         if (pendingStallSelections[i].eventID == eventID)
@@ -764,10 +782,10 @@ void EMS::managerRemoveEvent()
     }
     events.delete_at(eIdx - 1);
 
-    saveEventsToFile(); // <--- ENSURES FILE IS UPDATED
-    cout << "Event removed (and all related bookings/invoices/pending stalls).\n";
+    saveEventsToFile();
+    log_message(myString("INFO"), myString("Event removed (and all related bookings/invoices/pending stalls). :)"));
+    cout << "Event removed (and all related bookings/invoices/pending stalls). :)" << endl;
 }
-
 
 void EMS::managerRemoveVendor()
 {
@@ -782,7 +800,6 @@ void EMS::managerRemoveVendor()
     if (vIdx < 1 || vIdx > registeredVendors.size()) return;
     int vendorID = registeredVendors[vIdx - 1]->getID();
 
-    // Remove bookings/invoices
     for (int i = allBookings.size() - 1; i >= 0; i--)
     {
         if (allBookings[i]->getVendor()->getID() == vendorID)
@@ -796,14 +813,14 @@ void EMS::managerRemoveVendor()
             allBookings.delete_at(i);
         }
     }
-    // Remove pending stall selections
     for (int i = pendingStallSelections.size() - 1; i >= 0; i--)
     {
         if (pendingStallSelections[i].vendorID == vendorID)
             pendingStallSelections.delete_at(i);
     }
     registeredVendors.delete_at(vIdx - 1);
-    cout << "Vendor and all related data removed.\n";
+    log_message(myString("INFO"), myString("Vendor and all related data removed by manager. :("));
+    cout << "Vendor and all related data removed. :(" << endl;
 }
 
 void EMS::managerRemoveBooking()
@@ -818,121 +835,245 @@ void EMS::managerRemoveBooking()
     int bIdx; cin >> bIdx;
     if (bIdx < 1 || bIdx > allBookings.size()) return;
     int bookingID = allBookings[bIdx - 1]->getID();
-    // Remove related invoice
     for (int j = allInvoices.size() - 1; j >= 0; j--)
     {
         if (allInvoices[j]->getBooking()->getID() == bookingID)
             allInvoices.delete_at(j);
     }
     allBookings.delete_at(bIdx - 1);
-    cout << "Booking (and its invoice) removed.\n";
+    log_message(myString("INFO"), myString("Booking (and its invoice) removed by manager. :("));
+    cout << "Booking (and its invoice) removed. :(" << endl;
 }
 
 void EMS::saveVendorsToFile()
 {
-    ofstream out("vendors.txt");
-    for (int i = 0; i < registeredVendors.size(); i++)
+    try
     {
-        registeredVendors[i]->writeToFile(out);
+        ofstream out("vendors.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open vendors.txt for writing. :("));
+            cout << "Failed to open vendors.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < registeredVendors.size(); i++)
+        {
+            registeredVendors[i]->writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved vendors to vendors.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in saveVendorsToFile. :("));
+        cout << "An error occurred while saving vendors. :(" << endl;
+    }
 }
 
 void EMS::loadVendorsFromFile()
 {
-    ifstream in("vendors.txt");
-    while (in)
+    try
     {
-        Vendor* v = new Vendor();
-        if (v->readFromFile(in))
+        ifstream in("vendors.txt");
+        if (!in.is_open())
         {
-            registeredVendors.push(v);
+            log_message(myString("ERROR"), myString("Error opening vendors.txt for reading. :("));
+            cout << "Error opening vendors.txt. :(" << endl;
+            return;
         }
-        else
+        while (in)
         {
-            delete v;
+            Vendor* v = new Vendor();
+            if (v->readFromFile(in))
+            {
+                registeredVendors.push(v);
+            }
+            else
+            {
+                delete v;
+            }
         }
+        in.close();
+        log_message(myString("INFO"), myString("Loaded vendors from vendors.txt. :)"));
     }
-    in.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadVendorsFromFile. :("));
+        cout << "An error occurred while loading vendors. :(" << endl;
+    }
 }
 
 void EMS::savePendingVendorsToFile()
 {
-    ofstream out("pending_vendors.txt");
-    for (int i = 0; i < pendingRequests.size(); i++)
+    try
     {
-        pendingRequests[i].writeToFile(out);
+        ofstream out("pending_vendors.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open pending_vendors.txt for writing. :("));
+            cout << "Failed to open pending_vendors.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < pendingRequests.size(); i++)
+        {
+            pendingRequests[i].writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved pending vendors to pending_vendors.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in savePendingVendorsToFile. :("));
+        cout << "An error occurred while saving pending vendors. :(" << endl;
+    }
 }
+
 void EMS::loadPendingVendorsFromFile()
 {
-    ifstream in("pending_vendors.txt");
-    while (in)
+    try
     {
-        Vendor v;
-        if (v.readFromFile(in))
+        ifstream in("pending_vendors.txt");
+        if (!in.is_open())
         {
-            pendingRequests.push(v);
+            log_message(myString("ERROR"), myString("Error opening pending_vendors.txt for reading. :("));
+            cout << "Error opening pending_vendors.txt. :(" << endl;
+            return;
         }
+        while (in)
+        {
+            Vendor v;
+            if (v.readFromFile(in))
+            {
+                pendingRequests.push(v);
+            }
+        }
+        in.close();
+        log_message(myString("INFO"), myString("Loaded pending vendors from pending_vendors.txt. :)"));
     }
-    in.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadPendingVendorsFromFile. :("));
+        cout << "An error occurred while loading pending vendors. :(" << endl;
+    }
 }
 
 void EMS::savePendingStallSelectionsToFile()
 {
-    ofstream out("pending_stall_selections.txt");
-    for (int i = 0; i < pendingStallSelections.size(); i++)
+    try
     {
-        pendingStallSelections[i].writeToFile(out);
+        ofstream out("pending_stall_selections.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open pending_stall_selections.txt for writing. :("));
+            cout << "Failed to open pending_stall_selections.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < pendingStallSelections.size(); i++)
+        {
+            pendingStallSelections[i].writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved pending stall selections to pending_stall_selections.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in savePendingStallSelectionsToFile. :("));
+        cout << "An error occurred while saving pending stall selections. :(" << endl;
+    }
 }
+
 void EMS::loadPendingStallSelectionsFromFile()
 {
-    ifstream in("pending_stall_selections.txt");
-    while (in)
+    try
     {
-        PendingStallSelection req;
-        if (req.readFromFile(in))
+        ifstream in("pending_stall_selections.txt");
+        if (!in.is_open())
         {
-            pendingStallSelections.push(req);
+            log_message(myString("ERROR"), myString("Error opening pending_stall_selections.txt for reading. :("));
+            cout << "Error opening pending_stall_selections.txt. :(" << endl;
+            return;
         }
+        while (in)
+        {
+            PendingStallSelection req;
+            if (req.readFromFile(in))
+            {
+                pendingStallSelections.push(req);
+            }
+        }
+        in.close();
+        log_message(myString("INFO"), myString("Loaded pending stall selections from pending_stall_selections.txt. :)"));
     }
-    in.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadPendingStallSelectionsFromFile. :("));
+        cout << "An error occurred while loading pending stall selections. :(" << endl;
+    }
 }
 
 void EMS::loadEventsFromFile(const char* filename)
 {
-    ifstream in(filename);
-    if (!in.is_open())
+    try
     {
-        cout << "Error opening events file.\n";
-        return;
-    }
-
-    while (true)
-    {
-        Event e;
-        if (!e.readFromFile(in))
+        ifstream in(filename);
+        if (!in.is_open())
         {
-            break;
+            myString err("Failed to open events file: ");
+            err.append(filename);
+            err.append(" :(");
+            log_message(myString("ERROR"), err);
+            cout << "Error opening events file. :(" << endl;
+            return;
         }
-        events.push(e);
-    }
 
-    in.close();
+        while (true)
+        {
+            Event e;
+            if (!e.readFromFile(in))
+            {
+                break;
+            }
+            events.push(e);
+        }
+
+        myString msg("Loaded events from file: ");
+        msg.append(filename);
+        msg.append(" :)");
+        log_message(myString("INFO"), msg);
+        in.close();
+    }
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadEventsFromFile. :("));
+        cout << "An error occurred while loading events. :(" << endl;
+    }
 }
 
 void EMS::saveEventsToFile()
 {
-    ofstream out("events.txt");
-    for (int i = 0; i < events.size(); i++)
+    try
     {
-        events[i].writeToFile(out);
+        ofstream out("events.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open events.txt for writing. :("));
+            cout << "Failed to open events.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < events.size(); i++)
+        {
+            events[i].writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved events to events.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in saveEventsToFile. :("));
+        cout << "An error occurred while saving events. :(" << endl;
+    }
 }
+
 
 void EMS::addNewEvent()
 {
@@ -952,96 +1093,146 @@ void EMS::addNewEvent()
     Event e(myString(name), id, myString(venue), Date{ d, m, y }, myString(cat), stallCount);
     events.push(e);
 
-    saveEventsToFile(); // <--- ENSURES FILE IS ALWAYS IN SYNC
-    cout << "Event added successfully.\n";
+    saveEventsToFile();
+    log_message(myString("INFO"), myString("Event added successfully. :)"));
+    cout << "Event added successfully. :)" << endl;
 }
 
 void EMS::saveBookingsToFile()
 {
-    ofstream out("bookings.txt");
-    for (int i = 0; i < allBookings.size(); i++)
+    try
     {
-        allBookings[i]->writeToFile(out);
+        ofstream out("bookings.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open bookings.txt for writing. :("));
+            cout << "Failed to open bookings.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < allBookings.size(); i++)
+        {
+            allBookings[i]->writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved bookings to bookings.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in saveBookingsToFile. :("));
+        cout << "An error occurred while saving bookings. :(" << endl;
+    }
 }
 
 void EMS::loadBookingsFromFile()
 {
-    ifstream in("bookings.txt");
-    if (!in.is_open())
+    try
     {
-        cout << "Error opening bookings.txt\n";
-        return;
-    }
-
-    Vendor* vLookup[100];
-    for (int i = 0; i < registeredVendors.size(); i++)
-        vLookup[i] = registeredVendors[i];
-
-    const int MAX_STALLS = 1000;
-    Stall* sLookup[MAX_STALLS];
-    int sCount = 0;
-
-    for (int i = 0; i < events.size(); i++)
-    {
-        events[i].collectAllStalls(sLookup, sCount);
-    }
-
-    while (true)
-    {
-        Booking* b = new Booking();
-        if (!b->readFromFile(in, vLookup, registeredVendors.size(), sLookup, sCount))
+        ifstream in("bookings.txt");
+        if (!in.is_open())
         {
-            delete b;
-            break;
+            log_message(myString("ERROR"), myString("Error opening bookings.txt for reading. :("));
+            cout << "Error opening bookings.txt. :(" << endl;
+            return;
         }
 
-        allBookings.push(b);
+        Vendor* vLookup[100];
+        for (int i = 0; i < registeredVendors.size(); i++)
+            vLookup[i] = registeredVendors[i];
+
+        const int MAX_STALLS = 1000;
+        Stall* sLookup[MAX_STALLS];
+        int sCount = 0;
 
         for (int i = 0; i < events.size(); i++)
         {
-            if (events[i].getProductCategory().equal(b->getVendor()->getProductCategory()))
+            events[i].collectAllStalls(sLookup, sCount);
+        }
+
+        while (true)
+        {
+            Booking* b = new Booking();
+            if (!b->readFromFile(in, vLookup, registeredVendors.size(), sLookup, sCount))
             {
-                events[i].addBooking(b);
+                delete b;
                 break;
             }
-        }
-    }
 
-    in.close();
+            allBookings.push(b);
+
+            for (int i = 0; i < events.size(); i++)
+            {
+                if (events[i].getProductCategory().equal(b->getVendor()->getProductCategory()))
+                {
+                    events[i].addBooking(b);
+                    break;
+                }
+            }
+        }
+
+        in.close();
+        log_message(myString("INFO"), myString("Loaded bookings from bookings.txt. :)"));
+    }
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadBookingsFromFile. :("));
+        cout << "An error occurred while loading bookings. :(" << endl;
+    }
 }
 
 void EMS::saveInvoicesToFile()
 {
-    ofstream out("invoices.txt");
-    for (int i = 0; i < allInvoices.size(); i++)
+    try
     {
-        allInvoices[i]->writeToFile(out);
+        ofstream out("invoices.txt");
+        if (!out.is_open())
+        {
+            log_message(myString("ERROR"), myString("Failed to open invoices.txt for writing. :("));
+            cout << "Failed to open invoices.txt for writing. :(" << endl;
+            return;
+        }
+        for (int i = 0; i < allInvoices.size(); i++)
+        {
+            allInvoices[i]->writeToFile(out);
+        }
+        out.close();
+        log_message(myString("INFO"), myString("Saved invoices to invoices.txt. :)"));
     }
-    out.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in saveInvoicesToFile. :("));
+        cout << "An error occurred while saving invoices. :(" << endl;
+    }
 }
 
 void EMS::loadInvoicesFromFile()
 {
-    ifstream in("invoices.txt");
-    Booking* bLookup[500];
-    for (int i = 0; i < allBookings.size(); i++)
-        bLookup[i] = allBookings[i];
-
-    while (in)
+    try
     {
-        Invoice* inv = new Invoice();
-        if (inv->readFromFile(in, bLookup, allBookings.size()))
+        ifstream in("invoices.txt");
+        Booking* bLookup[500];
+        for (int i = 0; i < allBookings.size(); i++)
+            bLookup[i] = allBookings[i];
+
+        while (in)
         {
-            allInvoices.push(inv);
+            Invoice* inv = new Invoice();
+            if (inv->readFromFile(in, bLookup, allBookings.size()))
+            {
+                allInvoices.push(inv);
+            }
+            else
+            {
+                delete inv;
+            }
         }
-        else
-        {
-            delete inv;
-        }
+        in.close();
+        log_message(myString("INFO"), myString("Loaded invoices from invoices.txt. :)"));
     }
-    in.close();
+    catch (...)
+    {
+        log_message(myString("ERROR"), myString("Exception in loadInvoicesFromFile. :("));
+        cout << "An error occurred while loading invoices. :(" << endl;
+    }
 }
 
 #endif

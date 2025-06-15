@@ -1,0 +1,18 @@
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 01:34:03 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 01:34:27 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 01:35:10 2025
+Saved events to events.txt. :)
+[INFO] Mon Jun 16 01:35:10 2025
+Event added successfully. :)

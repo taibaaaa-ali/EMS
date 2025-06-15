@@ -23,12 +23,20 @@ public:
     void itoa(int num);
     void trim();
 
-    char charAt(int i) const;         // ✅ Fixed const
+    char charAt(int i) const;
     char& charRefAt(int i);
 
     bool equal(const myString& a) const;
     int comparison(const myString& other) const;
+
+    // New append functions:
+    void append(const myString& s);
+    void append(const char* c);
+    void append(char c);
+    void appendInt(int n);
 };
+
+// --- IMPLEMENTATION ---
 
 myString::myString()
 {
@@ -135,7 +143,7 @@ void myString::trim()
     size = newSize;
 }
 
-char myString::charAt(int i) const  // ✅ Fixed
+char myString::charAt(int i) const
 {
     return Vs[i];
 }
@@ -160,6 +168,84 @@ int myString::comparison(const myString& other) const
         i++;
     }
     return Vs[i] - other.Vs[i];
+}
+
+// New APPEND methods:
+void myString::append(const myString& s)
+{
+    int newSize = size + s.size - 1;
+    char* temp = new char[newSize];
+    int i = 0;
+    for (; i < size - 1; i++)
+        temp[i] = Vs[i];
+    for (int j = 0; j < s.size; j++)
+        temp[i + j] = s.Vs[j];
+    delete[] Vs;
+    Vs = temp;
+    size = newSize;
+}
+
+void myString::append(const char* c)
+{
+    int count = 0;
+    while (c[count] != '\0') count++;
+    int newSize = size + count;
+    char* temp = new char[newSize];
+    int i = 0;
+    for (; i < size - 1; i++)
+        temp[i] = Vs[i];
+    for (int j = 0; j < count; j++)
+        temp[i + j] = c[j];
+    temp[newSize - 1] = '\0';
+    delete[] Vs;
+    Vs = temp;
+    size = newSize;
+}
+
+void myString::append(char c)
+{
+    int newSize = size + 1;
+    char* temp = new char[newSize];
+    int i = 0;
+    for (; i < size - 1; i++)
+        temp[i] = Vs[i];
+    temp[size - 1] = c;
+    temp[newSize - 1] = '\0';
+    delete[] Vs;
+    Vs = temp;
+    size = newSize;
+}
+
+void myString::appendInt(int n)
+{
+    char buf[20];
+    int idx = 0, num = n;
+    if (n == 0)
+    {
+        buf[idx++] = '0';
+    }
+    else
+    {
+        char rev[20];
+        int revIdx = 0;
+        bool isNeg = false;
+        if (n < 0)
+        {
+            isNeg = true;
+            num = -n;
+        }
+        while (num > 0)
+        {
+            rev[revIdx++] = (num % 10) + '0';
+            num /= 10;
+        }
+        if (isNeg)
+            rev[revIdx++] = '-';
+        while (revIdx > 0)
+            buf[idx++] = rev[--revIdx];
+    }
+    buf[idx] = '\0';
+    append(buf);
 }
 
 #endif

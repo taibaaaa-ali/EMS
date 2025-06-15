@@ -140,6 +140,7 @@
     <ClInclude Include="FullPayment.h" />
     <ClInclude Include="InstallmentPayment.h" />
     <ClInclude Include="Invoice.h" />
+    <ClInclude Include="Logging.h" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="myString.h" />
     <ClInclude Include="Package.h" />
