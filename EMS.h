@@ -1,4 +1,4 @@
-﻿#ifndef EMS_H
+#ifndef EMS_H
 #define EMS_H
 
 #include <iostream>
@@ -194,8 +194,7 @@ void EMS::run()
             savePendingStallSelectionsToFile();
             // Save binary state
             savePendingStallsBinary("pending_stalls.bin");
-            log_message(myString("INFO"), myString("System shutdown. Goodbye! :)"));
-            break;
+            log_message(myString("INFO"), myString("..."));            break;
         }
         else
             cout << "Invalid option." << endl;

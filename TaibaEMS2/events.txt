@@ -1,0 +1,9 @@
+301,Comic Expo,Hall A,11,6,2025,Anime,0
+302,Gadget Fair,Hall B,20,7,2025,Electronics,0
+303,Food Fiesta,Hall C,15,8,2025,Food,0
+304,Book Fest,Hall D,25,9,2025,Books,0
+305,Tech Summit,Main Hall,10,10,2025,Technology,0
+306,Fashion Parade,Expo Hall,5,11,2025,Fashion,0
+307,Auto Show,Garage Arena,18,12,2025,Vehicles,0
+234,Anime Con,Hall A,2,9,2025,Anime,0
+234,Anime Con,Hall A,2,3,2025,Anime,6
