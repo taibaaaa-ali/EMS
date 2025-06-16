@@ -35,6 +35,10 @@ public:
     EMS();
     void run();
 
+    void savePendingStallsBinary(const char* filename);
+    bool loadPendingStallsBinary(const char* filename);
+
+
 private:
     void vendorRegister();
     void vendorLogin();
@@ -156,6 +160,46 @@ EMS::EMS()
     loadBookingsFromFile();
     loadInvoicesFromFile();
     loadPendingStallSelectionsFromFile();
+    // Load binary state (no file on first run is fine)
+    loadPendingStallsBinary("pending_stalls.bin");
+}
+
+// Main loop with binary save on exit
+void EMS::run()
+{
+    while (true)
+    {
+        cout << "--- Welcome to EMS ---" << endl;
+        cout << "1. Vendor Login" << endl;
+        cout << "2. Vendor Register" << endl;
+        cout << "3. Manager Login" << endl;
+        cout << "0. Exit" << endl;
+        cout << "Choose: ";
+
+        int opt;
+        cin >> opt;
+
+        if (opt == 1)
+            vendorLogin();
+        else if (opt == 2)
+            vendorRegister();
+        else if (opt == 3)
+            managerLogin();
+        else if (opt == 0)
+        {
+            saveVendorsToFile();
+            savePendingVendorsToFile();
+            saveBookingsToFile();
+            saveInvoicesToFile();
+            savePendingStallSelectionsToFile();
+            // Save binary state
+            savePendingStallsBinary("pending_stalls.bin");
+            log_message(myString("INFO"), myString("System shutdown. Goodbye! :)"));
+            break;
+        }
+        else
+            cout << "Invalid option." << endl;
+    }
 }
 
 void EMS::clearConsole()
@@ -167,48 +211,45 @@ void EMS::clearConsole()
 #endif
 }
 
-void EMS::run()
+void EMS::savePendingStallsBinary(const char* filename)
 {
-    while (true)
+    ofstream out(filename, ios::binary);
+    if (!out.is_open())
     {
-        cout << "--- Welcome to EMS ---\n";
-        cout << "1. Vendor Login\n";
-        cout << "2. Vendor Register\n";
-        cout << "3. Manager Login\n";
-        cout << "0. Exit\n";
-        cout << "Choose: ";
-
-        int opt;
-        cin >> opt;
-
-        if (opt == 1)
-        {
-            vendorLogin();
-        }
-        else if (opt == 2)
-        {
-            vendorRegister();
-        }
-        else if (opt == 3)
-        {
-            managerLogin();
-        }
-        else if (opt == 0)
-        {
-            saveVendorsToFile();
-            savePendingVendorsToFile();
-            saveBookingsToFile();
-            saveInvoicesToFile();
-            savePendingStallSelectionsToFile();
-            log_message(myString("INFO"), myString("System shutdown. Goodbye! :)"));
-            break;
-        }
-        else
-        {
-            cout << "Invalid option.\n";
-        }
+        cout << "Error opening binary file for write." << endl;
+        return;
     }
+    int count = pendingStallSelections.size();
+    out.write(reinterpret_cast<char*>(&count), sizeof(count));
+    for (int i = 0; i < count; ++i)
+    {
+        auto& req = pendingStallSelections[i];
+        out.write(reinterpret_cast<char*>(&req.vendorID), sizeof(req.vendorID));
+        out.write(reinterpret_cast<char*>(&req.eventID), sizeof(req.eventID));
+        out.write(reinterpret_cast<char*>(&req.stallID), sizeof(req.stallID));
+    }
+    out.close();
 }
+
+bool EMS::loadPendingStallsBinary(const char* filename)
+{
+    ifstream in(filename, ios::binary);
+    if (!in)
+        return false;
+    int count;
+    in.read(reinterpret_cast<char*>(&count), sizeof(count));
+    pendingStallSelections.clear();
+    for (int i = 0; i < count; ++i)
+    {
+        PendingStallSelection req;
+        in.read(reinterpret_cast<char*>(&req.vendorID), sizeof(req.vendorID));
+        in.read(reinterpret_cast<char*>(&req.eventID), sizeof(req.eventID));
+        in.read(reinterpret_cast<char*>(&req.stallID), sizeof(req.stallID));
+        pendingStallSelections.push(req);
+    }
+    return true;
+}
+
 
 
 void EMS::vendorRegister()

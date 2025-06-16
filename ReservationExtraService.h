@@ -1,7 +1,9 @@
-#include <iostream>
-using namespace std;
+#ifndef RESERVATIONEXTRASERVICE_H
+#define RESERVATIONEXTRASERVICE_H
 
+#include <iostream>
 #include "ExtraService.h"
+using namespace std;
 
 class ReservationExtraService
 {
@@ -25,12 +27,16 @@ ReservationExtraService::ReservationExtraService(int id, ExtraService* s, int qt
 
 float ReservationExtraService::get_total_cost() const
 {
-    return quantity * service->get_price();
+    return quantity * (service ? service->get_price() : 0.0f);
 }
 
 void ReservationExtraService::get_reservation_info() const
 {
     cout << "Reservation ID: " << resID << endl;
+    if (service)
+        service->get_service_info();
     cout << "Quantity: " << quantity << endl;
     cout << "Total Cost: $" << get_total_cost() << endl;
 }
+
+#endif

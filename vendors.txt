@@ -2,3 +2,9 @@
 116,Pippo,Anime,0309872772,meow
 67,test,Anime,12345678,issa
 104,Taiba,Anime,94884774,12345678
+345,zaid,Anime,0938488484,wisdom
+567,Zainab ,Anime,981737373,zainab
+555,Sara,Anime,438977279,sara
+124,Zayna,Electronics,9328997497,
+333,zara,Anime,2618638,zara
+30,somana,Anime,80830802,somana

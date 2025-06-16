@@ -16,3 +16,433 @@ Manager logged in. :)
 Saved events to events.txt. :)
 [INFO] Mon Jun 16 01:35:10 2025
 Event added successfully. :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 02:07:37 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 02:14:09 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 02:14:18 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 02:14:24 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 02:14:44 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 02:14:44 2025
+Saved pending vendors to pending_vendors.txt. :)
+[ERROR] Mon Jun 16 02:14:53 2025
+Vendor login failed. :(
+[INFO] Mon Jun 16 02:15:04 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 02:15:13 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 02:15:19 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 02:15:31 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 02:15:48 2025
+Vendor viewed bookings. :)
+[ERROR] Mon Jun 16 02:16:02 2025
+No unpaid invoices found for vendor. :(
+[INFO] Mon Jun 16 02:16:19 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 02:16:20 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 02:16:20 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 02:16:20 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 02:16:20 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 02:16:20 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 02:16:20 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 02:16:27 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 02:20:51 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 08:58:30 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 08:58:52 2025
+Manager logged in. :)
+[ERROR] Mon Jun 16 09:00:26 2025
+No pending event+stall requests for manager. :(
+[INFO] Mon Jun 16 09:01:12 2025
+Manager logged out. :)
+[ERROR] Mon Jun 16 09:01:21 2025
+Vendor login failed. :(
+[ERROR] Mon Jun 16 09:01:38 2025
+Vendor login failed. :(
+[INFO] Mon Jun 16 09:02:10 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 09:02:10 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:02:34 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:02:46 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 09:02:53 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:03:06 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:03:24 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:03:24 2025
+Stall selection submitted, pending manager approval. :)
+[ERROR] Mon Jun 16 09:03:38 2025
+No unpaid invoices found for vendor. :(
+[INFO] Mon Jun 16 09:03:41 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:03:47 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:04:05 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:04:05 2025
+Event+Stall approved, booking and invoice created. Vendor may now pay. :)
+[INFO] Mon Jun 16 09:04:17 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:04:18 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:04:18 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:04:18 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:04:18 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:04:18 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:04:18 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:07:53 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:08:14 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 09:08:14 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:08:30 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:08:39 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 09:09:10 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:09:16 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:09:26 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:09:26 2025
+Stall selection submitted, pending manager approval. :)
+[INFO] Mon Jun 16 09:09:30 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:09:31 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:09:31 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:09:31 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:09:31 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:09:31 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:09:31 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:11:48 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:12:14 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:12:32 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:12:32 2025
+Event+Stall approved, booking and invoice created. Vendor may now pay. :)
+[INFO] Mon Jun 16 09:12:43 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:12:44 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:12:44 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:12:44 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:12:44 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:12:44 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:12:44 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:18:06 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:18:31 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 09:18:31 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:18:54 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:19:02 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 09:19:09 2025
+Manager logged out. :)
+[ERROR] Mon Jun 16 09:19:20 2025
+Vendor login failed. :(
+[INFO] Mon Jun 16 09:19:44 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:19:55 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:19:55 2025
+Stall selection submitted, pending manager approval. :)
+[INFO] Mon Jun 16 09:20:13 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:20:23 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:20:34 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:20:34 2025
+Event+Stall approved, booking and invoice created. Vendor may now pay. :)
+[INFO] Mon Jun 16 09:20:41 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:20:49 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:21:02 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:21:02 2025
+Stall selection submitted, pending manager approval. :)
+[INFO] Mon Jun 16 09:21:15 2025
+Full payment received from vendor. :)
+[INFO] Mon Jun 16 09:21:15 2025
+Payment complete. Booking marked as Paid! :)
+[INFO] Mon Jun 16 09:21:20 2025
+Vendor viewed bookings. :)
+[INFO] Mon Jun 16 09:21:30 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:21:31 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:21:31 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:21:31 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:21:31 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:21:31 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:21:31 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:26:36 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:26:42 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:26:48 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:26:49 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:26:49 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:26:49 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:26:49 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:26:49 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:26:49 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:33:25 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:33:40 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 09:33:40 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:33:48 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:33:54 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 09:33:57 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:34:03 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:34:08 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:34:08 2025
+Stall selection submitted, pending manager approval. :)
+[INFO] Mon Jun 16 09:34:14 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:34:21 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:34:31 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:34:31 2025
+Event+Stall approved, booking and invoice created. Vendor may now pay. :)
+[INFO] Mon Jun 16 09:34:36 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:34:42 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:34:47 2025
+Full payment received from vendor. :)
+[INFO] Mon Jun 16 09:34:47 2025
+Payment complete. Booking marked as Paid! :)
+[INFO] Mon Jun 16 09:34:49 2025
+Vendor viewed bookings. :)
+[INFO] Mon Jun 16 09:34:51 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:34:52 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:34:52 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:34:52 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:34:52 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:34:52 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:34:52 2025
+System shutdown. Goodbye! :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded events from file: events.txt :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Mon Jun 16 09:54:53 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:55:12 2025
+Vendor registration submitted, awaiting manager approval. :)
+[INFO] Mon Jun 16 09:55:12 2025
+Saved pending vendors to pending_vendors.txt. :)
+[ERROR] Mon Jun 16 09:55:23 2025
+Vendor login failed. :(
+[INFO] Mon Jun 16 09:55:43 2025
+Manager logged in. :)
+[INFO] Mon Jun 16 09:55:49 2025
+Vendor approved by manager. :)
+[INFO] Mon Jun 16 09:55:53 2025
+Manager logged out. :)
+[INFO] Mon Jun 16 09:55:59 2025
+Vendor logged in successfully. :)
+[INFO] Mon Jun 16 09:56:08 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:56:08 2025
+Stall selection submitted, pending manager approval. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Vendor logged out. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Saved vendors to vendors.txt. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Saved pending vendors to pending_vendors.txt. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Saved bookings to bookings.txt. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Saved invoices to invoices.txt. :)
+[INFO] Mon Jun 16 09:56:12 2025
+Saved pending stall selections to pending_stall_selections.txt. :)
+[INFO] Mon Jun 16 09:56:12 2025
+System shutdown. Goodbye! :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded events from file: events.txt :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded vendors from vendors.txt. :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded pending vendors from pending_vendors.txt. :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded bookings from bookings.txt. :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded invoices from invoices.txt. :)
+[INFO] Tue Jun 17 01:31:27 2025
+Loaded pending stall selections from pending_stall_selections.txt. :)

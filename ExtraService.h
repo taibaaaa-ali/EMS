@@ -1,13 +1,16 @@
+#ifndef EXTRASERVICE_H
+#define EXTRASERVICE_H
+
 #include "myString.h"
 #include <iostream>
 using namespace std;
 
 class ExtraService
 {
-    int serviceID;
+    int id;
     myString name;
     myString description;
-    float unitPrice;
+    float price;
 
 public:
     ExtraService();
@@ -17,10 +20,10 @@ public:
     float get_price() const;
 };
 
-ExtraService::ExtraService() : serviceID(0), name(""), description(""), unitPrice(0.0f) {}
+ExtraService::ExtraService() : id(0), name(""), description(""), price(0.0f) {}
 
 ExtraService::ExtraService(int id, myString n, myString desc, float price)
-    : serviceID(id), name(n), description(desc), unitPrice(price) {
+    : id(id), name(n), description(desc), price(price) {
 }
 
 void ExtraService::get_service_info() const
@@ -28,15 +31,16 @@ void ExtraService::get_service_info() const
     cout << "Service: ";
     name.print();
     cout << endl;
-    cout << "ID: " << serviceID << endl;
+    cout << "ID: " << id << endl;
     cout << "Description: ";
     description.print();
     cout << endl;
-    cout << "Unit Price: $" << unitPrice << endl;
+    cout << "Unit Price: $" << price << endl;
 }
 
 float ExtraService::get_price() const
 {
-    return unitPrice;
+    return price;
 }
 
+#endif
