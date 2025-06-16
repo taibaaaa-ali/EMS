@@ -8,10 +8,10 @@ C:\Users\Dell\Desktop\bscs24116_EMS\EMS\Invoice.h(111,48): warning C4244: '=': c
 C:\Users\Dell\Desktop\bscs24116_EMS\EMS\Invoice.h(122,23): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\Dell\Desktop\bscs24116_EMS\EMS\stall_map_gui.h(53,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dell\Desktop\bscs24116_EMS\EMS\stall_map_gui.h(48,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
-C:\Users\Dell\Desktop\bscs24116_EMS\EMS\stall_map_gui.h(54,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Users\Dell\Desktop\bscs24116_EMS\EMS\stall_map_gui.h(49,27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   (compiling source file 'main.cpp')
   
   EventManagementSystem.vcxproj -> C:\Users\Dell\Desktop\bscs24116_EMS\EMS\x64\Debug\EMS.exe

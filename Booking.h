@@ -44,7 +44,7 @@ Booking::Booking() : bookingID(0), vendor(nullptr), stall(nullptr), status("Pend
 Booking::Booking(int id, Vendor* v) : bookingID(id), vendor(v), stall(nullptr), status("Pending") {}
 
 Booking::Booking(int id, Vendor* v, Stall* s, myString st)
-    : bookingID(id), vendor(v), stall(s), status(st)
+: bookingID(id), vendor(v), stall(s), status(st)
 {
 }
 

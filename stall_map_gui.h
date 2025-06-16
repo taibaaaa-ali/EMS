@@ -6,15 +6,12 @@
 
 int showStallMapGUI(const bool* bookedStalls)
 {
-    // Try to initialize a raylib window
     const int screenWidth = 800;
     const int screenHeight = 600;
     InitWindow(screenWidth, screenHeight, "Select Your Stall");
 
-    // If window failed to initialize, fall back to console
     if (!IsWindowReady())
     {
-        // Console fallback (ASCII map)
         std::cout << "\n[ASCII Stall Map Interface]\n";
         std::cout << "+-----------+\n";
         std::cout << "| ";
@@ -41,8 +38,6 @@ int showStallMapGUI(const bool* bookedStalls)
         std::cin >> stallID;
         return stallID;
     }
-
-    // Raylib GUI version
     SetTargetFPS(60);
 
     Rectangle stalls[6];

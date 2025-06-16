@@ -3,60 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Logging.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\EMS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:EMS.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:ExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:ReservationExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:stall_map_gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\events.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:events.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Vendor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Vendor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Templates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Stall.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Stall.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Vendor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Vendor.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:User.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Templates.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:stall_map_gui.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:ReservationExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\PendingStallSelection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:PendingStallSelection.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Payment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Package.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Payment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\myString.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -65,6 +49,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Manager.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Logging.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Invoice.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -79,20 +67,32 @@
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:FullPayment.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:ExtraService.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Event.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Date.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Date.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Dynamic_array.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Booking.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:Booking.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\events.txt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{772940FE-E87E-4027-8F1D-BDC01C4C9CCC}|EventManagementSystem.vcxproj|solutionrelative:events.txt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -102,45 +102,58 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EMS.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\EMS.h",
-              "RelativeDocumentMoniker": "EMS.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\EMS.h",
-              "RelativeToolTip": "EMS.h",
-              "ViewState": "AgIAAF8CAAAAAAAAAAAkwP0EAAAGAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "ReservationExtraService.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h",
+              "RelativeDocumentMoniker": "ReservationExtraService.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h",
+              "RelativeToolTip": "ReservationExtraService.h",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-16T22:34:22.036Z",
+              "WhenOpened": "2025-06-15T20:48:05.263Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "main.cpp",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp",
-              "RelativeDocumentMoniker": "main.cpp",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp",
-              "RelativeToolTip": "main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-06-15T19:38:49.736Z",
+              "Title": "Stall.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Stall.h",
+              "RelativeDocumentMoniker": "Stall.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Stall.h",
+              "RelativeToolTip": "Stall.h",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAkwDUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:27.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Logging.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h",
-              "RelativeDocumentMoniker": "Logging.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h",
-              "RelativeToolTip": "Logging.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "stall_map_gui.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h",
+              "RelativeDocumentMoniker": "stall_map_gui.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h",
+              "RelativeToolTip": "stall_map_gui.h",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAAACcAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-16T22:32:44.999Z",
+              "WhenOpened": "2025-06-15T20:48:30.501Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Templates.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h",
+              "RelativeDocumentMoniker": "Templates.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h",
+              "RelativeToolTip": "Templates.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:29.316Z",
               "EditorCaption": ""
             },
             {
@@ -151,87 +164,235 @@
               "RelativeDocumentMoniker": "User.h",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\User.h",
               "RelativeToolTip": "User.h",
-              "ViewState": "AgIAABkAAAAAAAAAAAAAwDoAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-15T20:49:06.274Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "Vendor.h",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Vendor.h",
               "RelativeDocumentMoniker": "Vendor.h",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Vendor.h",
               "RelativeToolTip": "Vendor.h",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAwIQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:49:08.605Z"
+              "WhenOpened": "2025-06-15T20:49:08.605Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReservationExtraService.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h",
-              "RelativeDocumentMoniker": "ReservationExtraService.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ReservationExtraService.h",
-              "RelativeToolTip": "ReservationExtraService.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAwAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "EMS.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\EMS.h",
+              "RelativeDocumentMoniker": "EMS.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\EMS.h",
+              "RelativeToolTip": "EMS.h",
+              "ViewState": "AgIAAPIBAAAAAAAAAAAswAgCAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:05.263Z"
+              "WhenOpened": "2025-06-16T22:34:22.036Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
+              "Title": "PendingStallSelection.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\PendingStallSelection.h",
+              "RelativeDocumentMoniker": "PendingStallSelection.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\PendingStallSelection.h",
+              "RelativeToolTip": "PendingStallSelection.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:06.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Package.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Package.h",
+              "RelativeDocumentMoniker": "Package.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Package.h",
+              "RelativeToolTip": "Package.h",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:13.128Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Payment.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h",
+              "RelativeDocumentMoniker": "Payment.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h",
+              "RelativeToolTip": "Payment.h",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:04.443Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "myString.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\myString.h",
+              "RelativeDocumentMoniker": "myString.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\myString.h",
+              "RelativeToolTip": "myString.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAPsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:03:41.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Manager.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Manager.h",
+              "RelativeDocumentMoniker": "Manager.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Manager.h",
+              "RelativeToolTip": "Manager.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:48:02.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Logging.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h",
+              "RelativeDocumentMoniker": "Logging.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Logging.h",
+              "RelativeToolTip": "Logging.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC4AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-16T22:32:44.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Invoice.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Invoice.h",
+              "RelativeDocumentMoniker": "Invoice.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Invoice.h",
+              "RelativeToolTip": "Invoice.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:16:33.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InstallmentPayment.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\InstallmentPayment.h",
+              "RelativeDocumentMoniker": "InstallmentPayment.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\InstallmentPayment.h",
+              "RelativeToolTip": "InstallmentPayment.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:16:33.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "FullPayment.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\FullPayment.h",
+              "RelativeDocumentMoniker": "FullPayment.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\FullPayment.h",
+              "RelativeToolTip": "FullPayment.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-15T20:16:32.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "ExtraService.h",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ExtraService.h",
               "RelativeDocumentMoniker": "ExtraService.h",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\ExtraService.h",
               "RelativeToolTip": "ExtraService.h",
-              "ViewState": "AgIAABAAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-06-15T20:16:31.339Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Templates.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h",
-              "RelativeDocumentMoniker": "Templates.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Templates.h",
-              "RelativeToolTip": "Templates.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 17,
+              "Title": "Event.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h",
+              "RelativeDocumentMoniker": "Event.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h",
+              "RelativeToolTip": "Event.h",
+              "ViewState": "AgIAABoBAAAAAAAAAAAAABoBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:29.316Z"
+              "WhenOpened": "2025-06-15T20:16:30.226Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "stall_map_gui.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h",
-              "RelativeDocumentMoniker": "stall_map_gui.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\stall_map_gui.h",
-              "RelativeToolTip": "stall_map_gui.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAABHAAAAAAAAAA==",
+              "DocumentIndex": 18,
+              "Title": "Date.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Date.h",
+              "RelativeDocumentMoniker": "Date.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Date.h",
+              "RelativeToolTip": "Date.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:30.501Z"
+              "WhenOpened": "2025-06-16T21:31:05.068Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Stall.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Stall.h",
-              "RelativeDocumentMoniker": "Stall.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Stall.h",
-              "RelativeToolTip": "Stall.h",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAwEoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 19,
+              "Title": "Dynamic_array.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h",
+              "RelativeDocumentMoniker": "Dynamic_array.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h",
+              "RelativeToolTip": "Dynamic_array.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:27.753Z"
+              "WhenOpened": "2025-06-15T20:46:59.149Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 20,
+              "Title": "Booking.h",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Booking.h",
+              "RelativeDocumentMoniker": "Booking.h",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Booking.h",
+              "RelativeToolTip": "Booking.h",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-06-16T21:30:44.477Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "main.cpp",
+              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp",
+              "RelativeDocumentMoniker": "main.cpp",
+              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\main.cpp",
+              "RelativeToolTip": "main.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-06-15T19:38:49.736Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
               "Title": "events.txt",
               "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\events.txt",
               "RelativeDocumentMoniker": "events.txt",
@@ -240,150 +401,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
               "WhenOpened": "2025-06-16T21:37:19.531Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "PendingStallSelection.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\PendingStallSelection.h",
-              "RelativeDocumentMoniker": "PendingStallSelection.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\PendingStallSelection.h",
-              "RelativeToolTip": "PendingStallSelection.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAwDkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:06.946Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "Payment.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h",
-              "RelativeDocumentMoniker": "Payment.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Payment.h",
-              "RelativeToolTip": "Payment.h",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAQwCMAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:04.443Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Package.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Package.h",
-              "RelativeDocumentMoniker": "Package.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Package.h",
-              "RelativeToolTip": "Package.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:13.128Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "myString.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\myString.h",
-              "RelativeDocumentMoniker": "myString.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\myString.h",
-              "RelativeToolTip": "myString.h",
-              "ViewState": "AgIAAN0AAAAAAAAAAAAQwPsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:03:41.856Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Manager.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Manager.h",
-              "RelativeDocumentMoniker": "Manager.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Manager.h",
-              "RelativeToolTip": "Manager.h",
-              "ViewState": "AgIAABgAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:48:02.654Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "Invoice.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Invoice.h",
-              "RelativeDocumentMoniker": "Invoice.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Invoice.h",
-              "RelativeToolTip": "Invoice.h",
-              "ViewState": "AgIAAHEAAAAAAAAAAAAQwI8AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:16:33.841Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "InstallmentPayment.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\InstallmentPayment.h",
-              "RelativeDocumentMoniker": "InstallmentPayment.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\InstallmentPayment.h",
-              "RelativeToolTip": "InstallmentPayment.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:16:33.096Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "FullPayment.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\FullPayment.h",
-              "RelativeDocumentMoniker": "FullPayment.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\FullPayment.h",
-              "RelativeToolTip": "FullPayment.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:16:32.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Event.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h",
-              "RelativeDocumentMoniker": "Event.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Event.h",
-              "RelativeToolTip": "Event.h",
-              "ViewState": "AgIAAPwAAAAAAAAAAAAQwBoBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:16:30.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "Dynamic_array.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h",
-              "RelativeDocumentMoniker": "Dynamic_array.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Dynamic_array.h",
-              "RelativeToolTip": "Dynamic_array.h",
-              "ViewState": "AgIAAGAAAAAAAAAAAAAQwHIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-15T20:46:59.149Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "Date.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Date.h",
-              "RelativeDocumentMoniker": "Date.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Date.h",
-              "RelativeToolTip": "Date.h",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-16T21:31:05.068Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Booking.h",
-              "DocumentMoniker": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Booking.h",
-              "RelativeDocumentMoniker": "Booking.h",
-              "ToolTip": "C:\\Users\\Dell\\Desktop\\bscs24116_EMS\\EMS\\Booking.h",
-              "RelativeToolTip": "Booking.h",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAQwLUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-06-16T21:30:44.477Z"
             }
           ]
         }

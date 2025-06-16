@@ -6,7 +6,6 @@ template <typename T>
 class Templates
 {
 public:
-    // Search by ID (requires T to have getID())
     static int findByID(const Dynamic_array<T>& arr, int id)
     {
         for (int i = 0; i < arr.size(); i++)
@@ -17,7 +16,6 @@ public:
         return -1;
     }
 
-    // Print all (requires T to have print_details())
     static void printAll(const Dynamic_array<T>& arr)
     {
         for (int i = 0; i < arr.size(); i++)

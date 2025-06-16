@@ -1,8 +1,9 @@
-#ifndef EMS_H
+﻿#ifndef EMS_H
 #define EMS_H
 
 #include <iostream>
 #include <fstream>
+#include <iomanip>
 #include "Date.h"
 #include "Vendor.h"
 #include "Stall.h"
@@ -20,6 +21,12 @@
 
 using namespace std;
 
+static constexpr const char* CLR_RESET = "\033[0m";
+static constexpr const char* CLR_RED = "\033[31m";
+static constexpr const char* CLR_GREEN = "\033[32m";
+static constexpr const char* CLR_YELLOW = "\033[33m";
+static constexpr const char* CLR_CYAN = "\033[36m";
+
 class EMS
 {
     Dynamic_array<Event> events;
@@ -28,7 +35,6 @@ class EMS
     Dynamic_array<Booking*> allBookings;
     Dynamic_array<Invoice*> allInvoices;
     Manager admin;
-
     Dynamic_array<PendingStallSelection> pendingStallSelections;
 
 public:
@@ -38,7 +44,6 @@ public:
     void savePendingStallsBinary(const char* filename);
     bool loadPendingStallsBinary(const char* filename);
 
-
 private:
     void vendorRegister();
     void vendorLogin();
@@ -47,7 +52,6 @@ private:
     void vendorPayInvoices(Vendor* v);
     void vendorViewBookings(Vendor* v);
     void vendorRemoveBooking(Vendor* v);
-
     void vendorSelectStall(Vendor* v, Event* e);
 
     void managerLogin();
@@ -56,10 +60,10 @@ private:
 
     void approveVendor();
     void approveEventStallSelections();
-
     void managerRemoveEvent();
     void managerRemoveVendor();
     void managerRemoveBooking();
+    void addNewEvent();
 
     void saveVendorsToFile();
     void loadVendorsFromFile();
@@ -69,12 +73,12 @@ private:
     void savePendingStallSelectionsToFile();
     void loadPendingStallSelectionsFromFile();
 
-    void loadEventsFromFile(const char* filename);
     void saveEventsToFile();
-    void addNewEvent();
+    void loadEventsFromFile(const char* filename);
 
     void saveBookingsToFile();
     void loadBookingsFromFile();
+
     void saveInvoicesToFile();
     void loadInvoicesFromFile();
 
@@ -153,28 +157,51 @@ private:
 
 EMS::EMS()
 {
-    admin = Manager(myString("Admin"), 999, myString("admin@ems.com"), myString("1234567890"), myString("admin123"));
+    admin = Manager(myString("Admin"),
+        999,
+        myString("admin@ems.com"),
+        myString("1234567890"),
+        myString("admin123"));
+
     loadEventsFromFile("events.txt");
     loadVendorsFromFile();
     loadPendingVendorsFromFile();
     loadBookingsFromFile();
     loadInvoicesFromFile();
     loadPendingStallSelectionsFromFile();
-    // Load binary state (no file on first run is fine)
     loadPendingStallsBinary("pending_stalls.bin");
 }
 
-// Main loop with binary save on exit
 void EMS::run()
 {
     while (true)
     {
-        cout << "--- Welcome to EMS ---" << endl;
+        clearConsole();
+
+        cout << CLR_CYAN
+            << "========================================\n"
+            << "         EVENT MANAGEMENT SYSTEM        \n"
+            << "========================================"
+            << CLR_RESET << "\n\n";
+
+        int paidCount = 0;
+        for (int i = 0; i < allInvoices.size(); i++)
+            if (allInvoices[i]->getAmountPaid() >= allInvoices[i]->getAmountDue())
+                paidCount++;
+
+        cout << CLR_CYAN
+            << "Vendors: " << registeredVendors.size()
+            << " | Pending: " << pendingRequests.size()
+            << " | Bookings: " << allBookings.size()
+            << " | Paid: " << paidCount
+            << CLR_RESET << "\n\n";
+
+        cout << CLR_YELLOW << "--- Welcome to EMS ---" << CLR_RESET << endl;
         cout << "1. Vendor Login" << endl;
         cout << "2. Vendor Register" << endl;
         cout << "3. Manager Login" << endl;
         cout << "0. Exit" << endl;
-        cout << "Choose: ";
+        cout << CLR_GREEN << "Choose: " << CLR_RESET;
 
         int opt;
         cin >> opt;
@@ -192,14 +219,17 @@ void EMS::run()
             saveBookingsToFile();
             saveInvoicesToFile();
             savePendingStallSelectionsToFile();
-            // Save binary state
             savePendingStallsBinary("pending_stalls.bin");
-            log_message(myString("INFO"), myString("..."));            break;
+            log_message(myString("INFO"), myString("System shutdown. Goodbye! :)"));
+            break;
         }
         else
-            cout << "Invalid option." << endl;
+        {
+            cout << CLR_RED << "Invalid option." << CLR_RESET << endl;
+        }
     }
 }
+
 
 void EMS::clearConsole()
 {
@@ -215,7 +245,9 @@ void EMS::savePendingStallsBinary(const char* filename)
     ofstream out(filename, ios::binary);
     if (!out.is_open())
     {
-        cout << "Error opening binary file for write." << endl;
+        cout << CLR_RED
+            << "Error opening binary file for write."
+            << CLR_RESET << endl;
         return;
     }
     int count = pendingStallSelections.size();
@@ -227,7 +259,6 @@ void EMS::savePendingStallsBinary(const char* filename)
         out.write(reinterpret_cast<char*>(&req.eventID), sizeof(req.eventID));
         out.write(reinterpret_cast<char*>(&req.stallID), sizeof(req.stallID));
     }
-    out.close();
 }
 
 bool EMS::loadPendingStallsBinary(const char* filename)
@@ -248,7 +279,6 @@ bool EMS::loadPendingStallsBinary(const char* filename)
     }
     return true;
 }
-
 
 
 void EMS::vendorRegister()
@@ -360,46 +390,42 @@ void EMS::vendorDashboard(Vendor* v)
 
 void EMS::vendorRegisterEventStall(Vendor* v)
 {
-    int availableCount = 0;
+    Dynamic_array<int> idxs;
     for (int i = 0; i < events.size(); i++)
     {
         if (events[i].getProductCategory().equal(v->getProductCategory()))
-        {
-            cout << availableCount + 1 << ". ";
-            events[i].show_event_details();
-            availableCount++;
-        }
+            idxs.push(i);
     }
-    if (availableCount == 0)
+
+    if (idxs.size() == 0)
     {
-        log_message(myString("ERROR"), myString("No events available to register for vendor. :("));
-        cout << "No events available to register for. :(" << endl;
+        cout << CLR_RED << "No events available to register." << CLR_RESET << "\n";
         return;
     }
-    cout << "Select Event Number to Register: ";
-    int eNum;
-    cin >> eNum;
-    int idx = -1;
-    for (int i = 0, c = 1; i < events.size(); i++)
+
+    cout << CLR_YELLOW << "\n--- Available Events ---" << CLR_RESET << "\n";
+    cout << string(22, '=') << "\n";
+
+    for (int j = 0; j < idxs.size(); j++)
     {
-        if (events[i].getProductCategory().equal(v->getProductCategory()))
-        {
-            if (c == eNum)
-            {
-                idx = i;
-                break;
-            }
-            c++;
-        }
+        int i = idxs[j];
+        cout << CLR_CYAN << (j + 1) << ". " << CLR_RESET;
+        events[i].show_event_details();
     }
-    if (idx == -1)
+
+    cout << CLR_GREEN << "\nSelect event number: " << CLR_RESET;
+    int sel;
+    cin >> sel;
+
+    if (sel < 1 || sel > idxs.size())
     {
-        log_message(myString("ERROR"), myString("Invalid event selection by vendor. :("));
-        cout << "Invalid selection. :(" << endl;
+        cout << CLR_RED << "Invalid selection." << CLR_RESET << "\n";
         return;
     }
-    vendorSelectStall(v, &events[idx]);
+
+    vendorSelectStall(v, &events[idxs[sel - 1]]);
 }
+
 
 void EMS::vendorPayInvoices(Vendor* v)
 {
@@ -493,17 +519,31 @@ void EMS::vendorPayInvoices(Vendor* v)
 
 void EMS::vendorViewBookings(Vendor* v)
 {
-    cout << "\n--- Your Bookings ---\n";
+    Dynamic_array<Booking*> mine;
     for (int i = 0; i < allBookings.size(); i++)
     {
         if (allBookings[i]->getVendor()->getID() == v->getID())
-        {
-            allBookings[i]->get_booking_details();
-            cout << endl;
-        }
+            mine.push(allBookings[i]);
     }
-    log_message(myString("INFO"), myString("Vendor viewed bookings. :)"));
+
+    if (mine.size() == 0)
+    {
+        cout << CLR_RED << "\nNo bookings found." << CLR_RESET << "\n";
+        return;
+    }
+
+    cout << CLR_YELLOW << "\n--- Your Bookings ---" << CLR_RESET << "\n";
+    cout << string(18, '=') << "\n";
+
+    for (int j = 0; j < mine.size(); j++)
+    {
+        cout << CLR_CYAN << (j + 1) << ". " << CLR_RESET;
+        mine[j]->get_booking_details();
+    }
+
+    log_message(myString("INFO"), myString("Vendor viewed bookings."));
 }
+
 
 void EMS::vendorRemoveBooking(Vendor* v)
 {
